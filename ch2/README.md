@@ -2,13 +2,10 @@
 
 | No | File | Description |
 | :-- |:--   |:--      |
-| 1 | baking.py | python class example |
-| 2 | numpy-practice.py | numpy library example |
-| 3 | sin-cos-graph.py | plot sin & cos using pyplot |
-| 4 | show-lena.py | print lena image |
+| 1 | logical-perceptron.py | simple logical perceptron (AND, OR, NAND, XOR) example |
 
 ### Concept
-- broadcast : 형상이 다른 배열끼리 계산
+- perceptron : 다수의 신호를 입력으로 받아 하나의 신호를 출력
 ```python
 print()
 ```
