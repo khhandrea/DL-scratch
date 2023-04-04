@@ -2,10 +2,12 @@
 
 | No | File | Description |
 | :-- |:--   |:--      |
-| 1 | logical-perceptron.py | simple logical perceptron (AND, OR, NAND, XOR) example |
+| 1 | activate-function.py | plot some activate functions |
+| 2 | MLP.py | 3 layered MLP example |
+| 3 | handwriting.py |  |
 
 ### Concept
-- perceptron : 다수의 신호를 입력으로 받아 하나의 신호를 출력
-```python
-print()
-```
+- activate function
+  - step function
+  - sigmoid function
+  - RELU function
