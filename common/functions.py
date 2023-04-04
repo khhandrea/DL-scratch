@@ -15,4 +15,17 @@ def identity(x):
 
 def softmax(x):
     c = np.max(x)
-    np.exp(x - c) / np.sum(np.exp(x - c))
+    y = np.exp(x - c) / np.sum(np.exp(x - c))
+
+    return y
+
+def softmax(x):
+    if x.ndim == 2:
+        x = x.T
+        c = np.max(x, axis=0)
+        y = np.exp(x - c) / np.sum(np.exp(x - c), axis=0)
+        return y.T 
+    
+    c = np.max(x)
+    y = np.exp(x - c) / np.sum(np.exp(x - c), axis=0)
+    return y

@@ -1,7 +1,9 @@
+import sys, os
+sys.path.append('/Users/khhandrea/Documents/Develop/2023/2023-DL-scratch-1')  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
 import numpy as np
 import pickle
-from common.functions import sigmoid, softmax
 from dataset.mnist import load_mnist
+from common.functions import sigmoid, softmax
 
 
 def get_data():
@@ -10,7 +12,7 @@ def get_data():
 
 
 def init_network():
-    with open("sample_weight.pkl", 'rb') as f:
+    with open("./ch3/sample_weight.pkl", 'rb') as f:
         network = pickle.load(f)
     return network
 
@@ -32,10 +34,20 @@ def predict(network, x):
 x, t = get_data()
 network = init_network()
 accuracy_cnt = 0
-for i in range(len(x)):
-    y = predict(network, x[i])
-    p= np.argmax(y) # 확률이 가장 높은 원소의 인덱스를 얻는다.
-    if p == t[i]:
+for input, target in zip(x, t):
+    y = predict(network, input)
+    p = np.argmax(y) # 확률이 가장 높은 원소의 인덱스를 얻는다.
+    if p == target:
         accuracy_cnt += 1
 
-print("Accuracy:" + str(float(accuracy_cnt) / len(x)))
+print(f'Unbatched Accuracy: {float(accuracy_cnt) / len(x)}')
+
+batch_size = 100
+accuracy_cnt = 0
+for i in range(0, len(x), batch_size):
+    x_batch = x[i:i+batch_size]
+    y_batch = predict(network, x_batch)
+    p = np.argmax(y_batch, axis=1)
+    accuracy_cnt += np.sum(p == t[i:i+batch_size])
+
+print(f'Batched accuacy: {float(accuracy_cnt) / len(x)}')
