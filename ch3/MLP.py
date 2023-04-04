@@ -1,6 +1,6 @@
 import numpy as np
 
-from active-function import sigmoid
+from active_function import sigmoid
 
 def init_network():
     network = {}

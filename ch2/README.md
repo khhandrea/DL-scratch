@@ -1,10 +1,8 @@
 ## Chapter 1. 헬로 파이썬
 
-| No | File | Description |
+| File | Description | Page |
 | :-- |:--   |:--      |
-| 1 | activate-function.py | plot some activate functions |
-| 2 | MLP.py | 3 layered MLP example |
-| 3 | handwriting.py |  |
+| logical_perceptron.py | logical perceptron (AND, OR, NAND) example | 49 |
 
 ### Concept
 - activate function

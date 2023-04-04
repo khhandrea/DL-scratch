@@ -2,13 +2,12 @@
 
 | No | File | Description |
 | :-- |:--   |:--      |
-| 1 | baking.py | python class example |
-| 2 | numpy-practice.py | numpy library example |
-| 3 | sin-cos-graph.py | plot sin & cos using pyplot |
-| 4 | show-lena.py | print lena image |
+| active_function.py | active function example | 91 |
+| MLP.py | 3 layered MLP example | 
 
 ### Concept
-- broadcast : 형상이 다른 배열끼리 계산
-```python
-print()
-```
+- 출력층
+  - identity function (generally used in regression)
+  - softmax function (generally used in classification)
+    - 원래는 $$\frac{exp(a_k)}{\sum_{i=1}^{n}exp(a_i)}$$이지만, overflow 방지를 위해 $$\frac{exp(a_k - C)}{\sum_{i=1}^{n} exp(a_i - C)}$$ (C는 신호 중 최댓값)을 사용한다.
+    - 보통 학습 단계에서는 softmax function을 사용하고, 추론 단계에서는 softmax function을 생략한다.
