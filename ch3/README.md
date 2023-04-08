@@ -1,6 +1,6 @@
 ## Chapter 1. 헬로 파이썬
 
-| No | File | Description |
+| File | Description | Page |
 | :-- |:--   |:--      |
 | active_function.py | active function example | 68 |
 | output_layer.py | identity function, softmax function | 91 |
