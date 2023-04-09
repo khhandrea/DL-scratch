@@ -1,4 +1,4 @@
-## Chapter 1. 헬로 파이썬
+## Chapter 2. 퍼셉트론
 
 | File | Description | Page |
 | :-- |:--   |:--      |

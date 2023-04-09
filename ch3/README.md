@@ -1,4 +1,4 @@
-## Chapter 1. 헬로 파이썬
+## Chapter 3. 신경망
 
 | File | Description | Page |
 | :-- |:--   |:--      |
