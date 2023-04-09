@@ -4,8 +4,8 @@
 | :-- |:--   |:--      |
 | gradient_descent.py | Numerical gradient, gradient descent | 127 |
 | loss_function.py | MSE, CEE | 112 |
-| train_neuralnet.py | Train 'two_layer_net.py' | 141 |
-| two_layer_net.py | Two-layered NN class defined | 137 |
+| train_neuralnet.py | Train 'two_layer_net.py' (수치 미분은 실행 시간이 너무 오래 걸려서, 역전파도 구현되어 있습니다.) | 141 |
+| two_layer_net.py | Two-layered NN class defined (수치 미분은 실행 시간이 너무 오래 걸려서, 역전파도 구현되어 있습니다.) | 137 |
 
 ### Concept
 - 손실 함수
