@@ -21,11 +21,13 @@
   $$x_0 = x_0 - \eta\frac{\partial f}{\partial x_0}$$
   $$x_1 = x_1 - \eta\frac{\partial f}{\partial x_1}$$
 
-- 확률적 경사 하강법 (Stochastic Gradient Descent, GSD) : 미니배치 데이터로 학습하는 경사 하강법
+- 확률적 경사 하강법 (Stochastic Gradient Descent, SGD) : 미니배치 데이터로 학습하는 경사 하강법
   1. Mini-batch
   2. 기울기 산출
   3. 매개변수 갱신
   4. 반복
+
+- SGD의 계산 속도는 많이 많이 느리다. ch5의 오차역전파법을 사용할 것을 추천
 
 - epoch : 학습에서 훈련 데이터를 모두 소진했을 떄의 횟수.
   - ((훈련 데이터 개수) / (배치 크기))회 = 1epoch
