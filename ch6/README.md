@@ -2,7 +2,8 @@
 
 | File | Description | Page |
 | :-- | :-- | :-- |
-| baking.py | python class example | 00 |
+| multi_layer_net.py | Basic multi-layered NN | 225 |
+| hyperparameter_optimization.py | Example of optimizing hyperparameter |  |
 
 ### Concept
 - Optimizer : 매개변수 갱신
