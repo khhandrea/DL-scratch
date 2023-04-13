@@ -26,6 +26,9 @@
     - L$\infty$ 법칙 : 각 원소 중 최댓값
   - Dropout : 노드를 무작위로 선택해 삭제
   - Ensemble learning : 개별적으로 학습시킨 여러 모델의 출력을 비교해 추론
+    - Voting
+    - Average
+    - Bagging : 훈련되는 데이터셋도 나눔
 - 적절한 Hyperparameter 값 찾기
   - Validation data : Hyperparameter의 성능을 평가할 때는, train data, test data와는 별개의 data를 사용해야 한다.
   - Hyperparameter 최적화
