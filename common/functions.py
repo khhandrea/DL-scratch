@@ -1,22 +1,22 @@
 import numpy as np
 
-def step(x):
+def step(x: np.ndarray) -> np.ndarray:
     y = x > 0
     return y.astype(int)
 
-def sigmoid(x):
+def sigmoid(x: np.ndarray) -> np.ndarray:
     return 1 / (1 + np.exp(-x))
 
-def sigmoid_grad(x):
+def sigmoid_grad(x: np.ndarray) -> np.ndarray:
     return (1.0 - sigmoid(x)) * sigmoid(x)
 
-def relu(x):
+def relu(x: np.ndarray) -> np.ndarray:
     return np.maximum(x, 0)
 
-def identity(x):
+def identity(x: np.ndarray) -> np.ndarray:
     return x
 
-def softmax(x):
+def softmax(x: np.ndarray) -> np.ndarray:
     if x.ndim == 2:
         x = x.T
         c = np.max(x, axis=0)
@@ -27,11 +27,11 @@ def softmax(x):
     y = np.exp(x - c) / np.sum(np.exp(x - c), axis=0)
     return y
 
-def mean_squared_error(y, t):
+def mean_squared_error(y: np.ndarray, t: np.ndarray) -> np.ndarray:
     return 0.5 * np.sum((y - t)**2)
 
-def cross_entropy_error(y, t):
-    delta = 1e-7
+def cross_entropy_error(y: np.ndarray, t: np.ndarray) -> np.ndarray:
+    delta: float = 1e-7
 
     if y.ndim == 1:
         t = t.reshape(1, t.size)

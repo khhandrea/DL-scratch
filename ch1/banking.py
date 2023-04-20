@@ -1,14 +1,14 @@
 class Bank:
-    def __init__(self, name):
-        self.name = name
-        self.balance = 0
+    def __init__(self, name: str) -> None:
+        self.name: str = name
+        self.balance: int = 0
         print(f'welcome, {name}!')
 
-    def deposit(self, amount):
+    def deposit(self, amount: int) -> None:
         self.balance += amount
         print('deposited successfully')
 
-    def withdraw(self, amount):
+    def withdraw(self, amount: int) -> None:
         if amount > self.balance:
             print('too many money!')
         else:
