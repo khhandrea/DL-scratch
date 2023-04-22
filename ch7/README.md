@@ -2,7 +2,10 @@
 
 | File | Description | Page |
 | :-- | :-- | :-- |
-| baking.py | python class example | 00 |
+| params.pkl | Trained convnet model parameter | 00 |
+| simple_convnet.py | Simple convnet model | 00 |
+| train_convnet.py | Train convnet model | 00 |
+| visualize_filter.py | Visualize convnet's 2d array filter | 00 |
 
 ### Concept
 - 기존의 완전연결 신경망 : Affine-ReLU - Affine-ReLU - ...
@@ -20,3 +23,6 @@
   - Padding : filled value at the edge of image
   - Stride : sliding amount
   - Pooling : shrink the image
+
+- im2col : Convolution의 연산 속도를 높이기 위해 객체를 2차원 배열로 변환
+- col2im : 2차원 배열을 원래 형상의 텐서로 변환
